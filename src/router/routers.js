@@ -208,6 +208,15 @@ export default [
     component: Main,
     children: [
       {
+        path: 'monitor',
+        name: '订单管理',
+        meta: {
+          icon: 'ios-document',
+          title: '订单管理'
+        },
+        component: () => import('@/view/components/yibin/monitor.vue')
+      },
+      {
         path: 'order',
         name: '生产计划智能推荐',
         meta: {
@@ -215,6 +224,15 @@ export default [
           title: '生产计划'
         },
         component: () => import('@/view/components/yibin/order.vue')
+      },
+      {
+        path: 'monitor',
+        name: '智能监控系统',
+        meta: {
+          icon: 'ios-document',
+          title: '智能监控系统'
+        },
+        component: () => import('@/view/components/yibin/monitor.vue')
       },
       {
         path: 'update_table_page',
