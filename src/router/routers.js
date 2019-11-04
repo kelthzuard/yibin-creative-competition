@@ -217,6 +217,24 @@ export default [
         component: () => import('@/view/components/yibin/monitor.vue')
       },
       {
+        path: 'produceOrder',
+        name: '生产计划管理',
+        meta: {
+          icon: 'ios-document',
+          title: '生产计划管理'
+        },
+        component: () => import('@/view/components/yibin/produceOrder.vue')
+      },
+      {
+        path: 'connectInfo',
+        name: '生产任务管理',
+        meta: {
+          icon: 'ios-document',
+          title: '生产任务管理'
+        },
+        component: () => import('@/view/components/yibin/connectInfo.vue')
+      },
+      {
         path: 'order',
         name: '生产计划智能推荐',
         meta: {
@@ -264,8 +282,17 @@ export default [
     component: Main,
     children: [
       {
+        path: 'predict',
+        name: '市场预测',
+        meta: {
+          icon: 'md-add',
+          title: '市场预测'
+        },
+        component: () => import('@/view/components/yibin/predict.vue')
+      },
+      {
         path: 'upload-excel',
-        name: 'upload-excel',
+        name: '自动爬虫配置',
         meta: {
           icon: 'md-add',
           title: '导入EXCEL'
@@ -273,13 +300,13 @@ export default [
         component: () => import('@/view/excel/upload-excel.vue')
       },
       {
-        path: 'export-excel',
-        name: 'export-excel',
+        path: 'upload-excel',
+        name: '决策支持',
         meta: {
-          icon: 'md-download',
-          title: '导出EXCEL'
+          icon: 'md-add',
+          title: '导入EXCEL'
         },
-        component: () => import('@/view/excel/export-excel.vue')
+        component: () => import('@/view/excel/upload-excel.vue')
       }
     ]
   },
